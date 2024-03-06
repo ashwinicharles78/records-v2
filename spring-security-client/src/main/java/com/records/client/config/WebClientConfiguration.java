@@ -1,4 +1,4 @@
-package com.dailycodebuffer.client.config;
+package com.records.client.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

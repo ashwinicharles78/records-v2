@@ -1,4 +1,4 @@
-package com.dailycodebuffer.oauthserver.service;
+package com.records.oauthserver.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Autowired
-    private CustomUserDetailsService customUserDetailsService;
+    private com.records.oauthserver.service.CustomUserDetailsService customUserDetailsService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;

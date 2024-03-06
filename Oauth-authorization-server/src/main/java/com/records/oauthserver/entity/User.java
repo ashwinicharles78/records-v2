@@ -1,8 +1,9 @@
-package com.dailycodebuffer.oauthserver.entity;
+package com.records.oauthserver.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
+
 
 @Entity
 @Data

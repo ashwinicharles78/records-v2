@@ -1,4 +1,4 @@
-package com.dailycodebuffer.oauthserver.config;
+package com.records.oauthserver.config;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;

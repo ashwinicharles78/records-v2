@@ -7,11 +7,18 @@
     <groupId>org.example</groupId>
     <artifactId>records-v2</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>RecordsSpringBootApplication</module>
+        <module>spring-security-client</module>
+        <module>Oauth-authorization-server</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
 </project>

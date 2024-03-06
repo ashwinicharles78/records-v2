@@ -1,4 +1,4 @@
-package com.dailycodebuffer.client.entity;
+package com.records.client.entity;
 
 import lombok.Data;
 

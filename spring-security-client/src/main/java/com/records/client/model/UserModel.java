@@ -1,4 +1,4 @@
-package com.dailycodebuffer.client.model;
+package com.records.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,5 +12,6 @@ public class UserModel {
     private String lastName;
     private String email;
     private String password;
+    private String role;
     private String matchingPassword;
 }

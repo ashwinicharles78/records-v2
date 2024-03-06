@@ -1,6 +1,6 @@
-package com.dailycodebuffer.oauthserver.config;
+package com.records.oauthserver.config;
 
-import com.dailycodebuffer.oauthserver.service.CustomAuthenticationProvider;
+import com.records.oauthserver.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.Customizer;

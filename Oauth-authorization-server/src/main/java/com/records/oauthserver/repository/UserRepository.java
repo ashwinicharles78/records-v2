@@ -1,7 +1,7 @@
-package com.dailycodebuffer.oauthserver.repository;
+package com.records.oauthserver.repository;
 
 
-import com.dailycodebuffer.oauthserver.entity.User;
+import com.records.oauthserver.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
