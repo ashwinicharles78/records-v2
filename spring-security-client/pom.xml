@@ -67,7 +67,7 @@
 			<artifactId>reactor-netty</artifactId>
 		</dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

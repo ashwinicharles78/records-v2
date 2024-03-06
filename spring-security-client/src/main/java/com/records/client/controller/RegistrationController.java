@@ -16,7 +16,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@Slf4j
 public class RegistrationController {
 
     @Autowired

@@ -1,10 +1,16 @@
 package com.records.client.controller;
 
+import com.records.client.model.RecordsModel;
 import net.minidev.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -24,6 +30,23 @@ public class HelloController {
         return "Hello " +principal.getName()+", This is a test!!";
     }
 
+    @PreAuthorize("hasAuthority('WRITER')")
+    @PostMapping("/api/users")
+    public JSONArray postRecords(
+            @RegisteredOAuth2AuthorizedClient("api-client-authorization-code")
+            OAuth2AuthorizedClient client, @RequestBody RecordsModel records){
+        return this.webClient
+                .post()
+                .uri("http://127.0.0.1:8090/records")
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue(records)
+                .attributes(oauth2AuthorizedClient(client))
+                .retrieve()
+                .bodyToMono(JSONArray.class)
+                .block();
+    }
+
+    @Secured("ROLE_READER")
     @GetMapping("/api/users")
     public JSONArray users(
             @RegisteredOAuth2AuthorizedClient("api-client-authorization-code")
